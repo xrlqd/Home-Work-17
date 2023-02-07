@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	  
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+    	$(function() {
+
+$( "#dialog, #d" ).dialog({ autoOpen: false
+
+});
+
+$("#btn1, #btn2").button().click(function(e){ var target = this.id ="btn1" ? "#dialog" : "#d";
+
+if ($(target).dialog("isOpen")) {
+
+$(target).dialog("close")
+
+} else {
+
+$(target).dialog("open")
+
+}
+
+})
+
+});
+    </script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-app>
+	<header class="flex-h">
+
+		<img src="mountain.png">
+
+		<h1>Найвищі гори України</h1>
+
+
+		<div id="dialog" class="dial" title="Contact">
+			<p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">+380 67 123 45 67</a></p>
+		</div>
+
+		<div id="btn1" class="сontact">
+			Contact us
+		</div>
+
+	</header>
+<center>
+	<form action="#">
+		<h2>Обрати пункт для перегляду</h2>
+	<input type="radio" ng-model="info" value="kyiv">Ґутин Томнатик
+		<input type="radio" ng-model="info" value="dnipro">Петрос
+		<input type="radio" ng-model="info" value="pop">Поп Іван 
+		<input type="radio" ng-model="info" value="bre">Бребенескул
+		<input type="radio" ng-model="info" value="odesa">Говерла
+	</form>
+
+	<div ng-switch="info">
+		<div ng-switch-when="kyiv">
+	 		<h2>Ґутин Томнатик</h2>
+	 		<img style="width: 350px; height: 250px;" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Gutin_Tomnatyk.jpg" alt="">
+	 		<p><h3>Вершина Гутін Томнатік знаходиться в Рахівському районі Закарпатської області, неподалік озера Бребенескул. Причому, як не дивно, вона ближча до нього, ніж однойменна гора. Так що чудова нагода поєднати! Це високогірне озеро України на висоті 1801 м. Своїм незвичайним ландшафтом і флорою пік завдячує своєму походженню, адже свого часу на нього дуже вплинув льодовик. Зараз тут багато дивовижних альпійських та субальпійських рослин, включаючи рідкісні, вимираючі та реліктові види. Відпочити поблизу можна в селі Говерла або Бистрець</h3></p>
+		</div>
+		<div ng-switch-when="dnipro">
+	 		<h2>Петрос</h2>
+	 		<img style="width: 320px;" src="https://karpatium.com.ua/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc0FFIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c8eeac5771af1fdc1c718452c446dc76700be7d6/%D0%B3%D0%BE%D1%80%D0%B0-%D0%BF%D0%B5%D1%82%D1%80%D0%BE%D1%81-%D0%B7-%D1%8F%D0%B1%D0%BB%D1%83%D0%BD%D0%B8%D1%86%D1%96.jpeg" alt="">
+	 		<p><h3>Петрос знаходиться за Говерлою і вражає ефектною красою. Особливо казково вершина виглядає в негоду, оповиту хмарами та блискавками, за що її й прозвали грозовою. Водночас вона вважається найнебезпечнішою на всьому Чорногорському хребті. Глибоке урочище між Петросом і Говерлою ніби відокремлює гору від решти масиву. Поблизу можна відпочити у Лазещинах чи Квасах.</h3></p>
+		</div>
+		<div ng-switch-when="pop">
+	 		<h2>Поп Іван</h2>
+	 		<img style="width: 350px; height: 280px;" src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Pop_Iwan.jpg" alt="">
+	 		<p><h3>Це ще одна вершина Чорногорського масиву, що знаходиться неподалік гори Бребенескул. Звідси відкривається найкрасивіша панорама на весь хребет та околиці. Зверху знаходиться незвичайна обсерваторія, яка приваблює туристів – Білий слон. Дорогою можна відпочити в селі Шибене та відвідати озеро Маричейка. Види довкола дуже ефектні, адже гора не дарма належить до Карпатського державного національного парку. Стара назва – Чорна гора, і за переказами саме тут Олекса Довбуш переміг межу.</h3></p>
+		</div>
+		<div ng-switch-when="bre">
+			<h2>Бребенескул</h2>
+			<img style="width: 350px; height: 200px;" src="https://karpatium.com.ua/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdVlKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1b4c410fe3e52e67eaa855651b65dcaf29ffee01/%D0%B1%D1%80%D0%B5%D0%B1%D0%B5%D0%BD%D0%B5%D1%81%D0%BA%D1%83%D0%BB.jpeg" alt="">
+			<p><h3>Вершина Бребенескул знаходиться між двох інших мальовничих гір – Менчул та Ребра. Вона не так явно виділяється на тлі навколишнього пейзажу, але тут є зручні трекінгові маршрути, а по дорозі можна побачити ще багато карпатських пам'яток. Наприклад, однойменне високогірне озеро, Дзембронські водоспади або Вухатий камінь.</h3></p>
+		</div>
+		<div ng-switch-when="odesa">
+			<h2>Одєсса</h2>
+			<img style="width: 350px; height: 200px;" src="https://karpatium.com.ua/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0VIIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--672de41986b3eb3547d1cf8a50a6ac8ae4b3d4ba/%D0%B3%D0%BE%D0%B2%D0%B5%D1%80%D0%BB%D0%B0-%D0%B3%D0%BE%D1%80%D0%B0.jpeg?disposition=attachment" alt="">
+			<p><h3>Говерла – найвища точка в українській частині Карпат. Знаходиться вона на стику Закарпатської та Івано-Франківської областей, і це беззастережно найпопулярніший маршрут! Тим більше, довкола повно місць, де можна зупинитися – Яремче, Верховина, Ворохта.
+
+      Біля підніжжя Говерли знаходиться головне джерело річки Прут, а неподалік – каскад водоспадів заввишки близько 80 м. Тут кілька туристичних доріжок, і перша з'явилася ще 1880 року.</h3></p>
+		</div>
+	</div>
+</center>
+	
+	<footer>
+		<h1>Tours</h1>
+		<div>
+			<img src="telegram.png" alt="">
+			<img src="instagram.png" alt="">
+			<img src="youtube.png" alt="">
+		</div>
+		<h2>&copy; СМАРТ. 2023</h2>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</body>
+</html>
